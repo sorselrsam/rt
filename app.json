@@ -1,0 +1,53 @@
+{
+    "name": "Source Freedom",
+    "description": "لتشغيل الاغاني في المجموعات والقنوات.",
+    "logo": "https://telegra.ph/file/cc9d3ab087176593ec101.jpg",
+    "keywords": [
+        "Telegram",
+        "MusicPlayer",
+        "VideoPlayer"
+    ],
+    "repository": "https://github.com/SoRsRR8r9/strong",
+    "env": {
+        "SESSION": {
+            "description": "اكتب هنا كود ترمكس",
+            "required": true
+        },
+          "API_ID": {
+            "description": "ايبي ايدي",
+            "required": true,
+            "value": "19399491"
+        },
+        "HNDLR": {
+            "description": "لاتغيرها ابدا",
+            "required": false,
+            "value": ""
+        },
+            "API_HASH": {
+            "description": "الايبي هاش",
+            "required": true,
+            "value": "eaa4f266934dfef23edb6d1f25e0b10f"
+        },
+           "SUDO_USERS": {
+            "description": "اكتب ايدي المطور او اتركها كما هي",
+            "required": true,
+            "value": "2125600195"
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
